@@ -1,0 +1,12 @@
+#headerContainer{
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+
+  img {
+    width: 170px;
+    height: 52px;
+    margin-left: 30px;
+    margin-top: 25px;
+  }
+}
