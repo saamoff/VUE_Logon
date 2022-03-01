@@ -1,0 +1,19 @@
+#loginContainerL{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  max-width: 50%;
+  background: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
+
+  #greetings{
+    width: 35%;
+    margin-right: 5%;
+    top: 20%;
+  }
+  
+  form{
+    width: 40%;
+  }
+}

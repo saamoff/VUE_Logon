@@ -1,0 +1,19 @@
+#loginContainerR{
+  max-width: 50%;
+  height: 100vh;
+
+  background: url('../../assets/images/banner.png');
+  background-size: cover;
+  flex-grow: 1;
+
+  #logoCompass{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  
+    img{
+      width: 50%;
+    }
+  }
+  
+}
