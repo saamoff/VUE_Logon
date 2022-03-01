@@ -12,7 +12,7 @@
       <button>Continuar<br>Navegando</button>
     </div>
     <div id="logout">
-      <button>Logout</button>
+      <button @click="logout">Logout</button>
     </div>
   </div>
 </template>
@@ -25,6 +25,11 @@ export default {
   components: {
     TextContent,
     Timer
+  },
+  methods:{
+    logout(){
+      router.push({name:'Login'})
+    }
   }
 }
 </script>

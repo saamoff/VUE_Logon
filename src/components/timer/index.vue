@@ -1,7 +1,7 @@
 <template>
   <div class='containerTimer'>
     <div id='timerSeconds'>
-      <Title :text="seconds"></Title>
+      <Title timerFooter=true control="2" :text="seconds"></Title>
       <TextContent text="seconds"></TextContent>
     </div>
   </div>

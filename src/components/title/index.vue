@@ -1,6 +1,6 @@
 <template>
   <h1 v-if="control === '1'" :class="{contentHomeTitle:contentHome1, contentHome:contentHome2, clockClass:clock, loginTitle:titleLogin, detailsLogin:titleDetails}">{{ text }}</h1>
-  <h2 v-else-if="control === '2'" :class="{contentHomeTitle:contentHome1, contentHome:contentHome2, clockClass:clock, loginTitle:titleLogin, detailsLogin:titleDetails}">{{ text }}</h2>
+  <h2 v-else-if="control === '2'" :class="{contentHomeTitle:contentHome1, contentHome:contentHome2, clockClass:clock, loginTitle:titleLogin, detailsLogin:titleDetails, timerClass:timerFooter}">{{ text }}</h2>
   <h3 v-else-if="control === '3'" :class="{contentHomeTitle:contentHome1, contentHome:contentHome2, clockClass:clock, loginTitle:titleLogin, detailsLogin:titleDetails}">{{ text }}</h3>
   <h4 v-else-if="control === '4'" :class="{contentHomeTitle:contentHome1, contentHome:contentHome2, clockClass:clock, loginTitle:titleLogin, detailsLogin:titleDetails}">{{ text }}</h4>
   <h5 v-else-if="control === '5'" :class="{contentHomeTitle:contentHome1, contentHome:contentHome2, clockClass:clock, loginTitle:titleLogin, detailsLogin:titleDetails}">{{ text }}</h5>
@@ -34,6 +34,9 @@ export default {
       default: false
     },
     titleDetails: {
+      default: false
+    },
+    timerFooter: {
       default: false
     }
   },
