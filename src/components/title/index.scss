@@ -11,12 +11,28 @@ h1 {
   font-size: 36px;
   font-weight: 700;
   color: #C12D18;
+
+  @media(max-width: 1280px){
+    font-size: 26px;
+  }
+
+  @media(max-width: 1024px){
+    display: none;
+  }
 }
 
 .contentHome{
   font-size: 64px;
   font-weight: 700;
   color: #C12D18;
+
+  @media(max-width: 1280px){
+    font-size: 34px;
+  }
+
+  @media(max-width: 1024px){
+    display: none;
+  }
 }
 
 .loginTitle{

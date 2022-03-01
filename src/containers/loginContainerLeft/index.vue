@@ -1,5 +1,6 @@
 <template>
   <div id="loginContainerL">
+    <img src="@/assets/images/Logo-Compasso-Branco-hor1.png" alt="logo">
     <div id="greetings">
       <Title titleLogin=true control="1" text="Olá,"></Title>
       <TextContent pLogin=true text="Para continuar navegando de forma segura, efetue o login na rede."></TextContent>

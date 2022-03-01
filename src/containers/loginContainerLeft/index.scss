@@ -7,13 +7,55 @@
   max-width: 50%;
   background: linear-gradient(180deg, #33383D 0%, #1C1D20 100%);
 
+  img{
+    position: absolute;
+    width: 30%;
+    display: none;
+
+    @media(max-width: 1024px){
+      display: block;
+      top: 0;
+      right: 5%;
+    }
+
+    @media(max-width: 550px){
+      display: block;
+      top: 0;
+      right: 5%;
+      width: 50%;
+    }
+  }
+
+  @media(max-width: 1024px){
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+  }
   #greetings{
     width: 35%;
     margin-right: 5%;
     top: 20%;
+
+    @media(max-width: 1280px){
+      width: 40%;
+      margin-right: 9%;
+    }
+
+    @media(max-width: 550px){
+      margin-right: 10%;
+      width: 60%;
+    }
   }
   
   form{
     width: 40%;
+
+    @media(max-width: 1280px){
+      width: 50%;
+    }
+
+    @media(max-width: 550px){
+      width: 70%;
+    }
   }
 }

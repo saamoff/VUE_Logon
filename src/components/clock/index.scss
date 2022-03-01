@@ -5,6 +5,10 @@
   align-items: center;
   height: 265px;
   
+  @media(max-width: 1024px){
+    display: none;
+  }
+  
   #clockContainer {
     display: flex;
     height: 50%;

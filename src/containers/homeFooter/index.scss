@@ -7,6 +7,9 @@
   background: linear-gradient(90.16deg, #33383d 0%, #1c1d20 100%);
   grid-template-columns: 17.6% 28.6% 5.8% 5.5% 5% 23.5% 7% 7%;
   
+  @media(max-width: 1024px){
+    grid-template-columns: 30% 70%;
+  }
   button{
     background: transparent;
     border: 0;
@@ -19,6 +22,10 @@
     align-items: center;
     text-align: right;
     grid-column: 2;
+
+    @media(max-width: 1024px){
+      display: none;
+    }
   }
 
   #border{
@@ -28,6 +35,10 @@
     width: 0px;
     grid-column: 3;
     margin-left: 35px;
+
+    @media(max-width: 1024px){
+      display: none;
+    }
   }
 
   #container2{
@@ -36,11 +47,19 @@
     align-items: center;
     text-align: right;
     grid-column: 4;
+
+    @media(max-width: 1024px){
+      display: none;
+    }
   }
 
   #timerContainer{
     grid-column: 5;
     margin-left: 40px;
+
+    @media(max-width: 1024px){
+      display: none;
+    }
   }
 
   #continueNav{
@@ -50,15 +69,21 @@
     justify-content: center;
     background-color: white;
     text-align: center;
+    
     button{
       color: #C13216;
       width: 100%;
       height: 100px;
     }
+
     button:hover{
       cursor: pointer;
       color: black;
       transition: 400ms;
+    }
+
+    @media(max-width: 1024px){
+      grid-column: 2;
     }
   }
 
@@ -72,10 +97,26 @@
       color: white;
       width: 100%;
     }
+
     button:hover{
       cursor: pointer;
       color: #C13216;
       transition: 400ms;
+    }
+
+    @media(max-width: 1024px){
+      position: absolute;
+      bottom: 40px;
+      left: 100px;
+      grid-column: 1;
+    }
+
+    @media(max-width: 750px){
+      left: 80px;
+    }
+
+    @media(max-width: 550px){
+      left: 50px;
     }
   }
 }
