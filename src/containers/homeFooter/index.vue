@@ -20,6 +20,7 @@
 <script>
 import TextContent from '@/components/textContent/index.vue';
 import Timer from '@/components/timer/index.vue'
+import router from '@/router/index.js'
 export default {
   name: 'HomeFooter',
   components: {
