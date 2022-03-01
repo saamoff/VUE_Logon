@@ -4,7 +4,7 @@
       <Title titleLogin=true control="1" text="Olá,"></Title>
       <TextContent pLogin=true text="Para continuar navegando de forma segura, efetue o login na rede."></TextContent>
     </div>
-    <form id="loginDetails">
+    <form @submit.prevent="loginForm" id="loginDetails">
       <Title titleDetails=true control="3" text="Login"></Title>
       <InputLogin inputText=true typeInput="text" placeHolder="Usuário" icon="usericon"></InputLogin>
       <InputLogin inputText=true typeInput="password" placeHolder="Senha" icon="lockpad"></InputLogin>
@@ -14,6 +14,7 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 import TextContent from '@/components/textContent/index.vue';
 import Title from '@/components/title/index.vue';
 import InputLogin from '@/components/input/index.vue';
@@ -23,6 +24,9 @@ export default {
     TextContent,
     Title,
     InputLogin
+  },
+  methods:{
+    ...mapMutations(["setLoginError", "loginForm"])
   }
 }
 </script>
