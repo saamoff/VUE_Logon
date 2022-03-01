@@ -1,0 +1,43 @@
+#inputLogin{
+  width: 100%;
+
+  img{
+    padding-left: 100px; 
+  }
+
+  input{
+    background: transparent;
+    border: 0;
+    color: #E0E0E0;
+  }
+
+  input:focus{
+    outline-width: 0;
+  }
+}
+
+.inputTextClass{
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  background: #26292c;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 9%;
+}
+
+.inputSubmitClass{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: linear-gradient(90deg, #FF2D04 0%, #C13216 100%);
+  box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 50px;
+  margin-top: 115px;
+  height: 60px;
+}
