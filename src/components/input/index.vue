@@ -1,6 +1,6 @@
-<template>
+template>
   <div :class="{inputTextClass:inputText, inputSubmitClass:inputSubmit}" id="inputLogin">
-    <input :type="typeInput" required :placeholder="placeHolder" :value="innerHTML">
+    <i<nput :type="typeInput" required :placeholder="placeHolder" :value="text">
     <img v-if="icon" :src="require(`@/assets/images/${iconID}.png`)" alt="Icon">
   </div>
 </template>
@@ -17,7 +17,7 @@ export default {
       type: String,
       default: 'Sample Text'
     },
-    innerHTML: {
+    text: {
       type: String,
       default: ''
     },

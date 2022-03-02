@@ -5,7 +5,7 @@
       <Title clock=true control="1" text=":"></Title>
       <Title clock=true control="1" :text="`${minutes}`"></Title>
     </div>
-    <textContent :text="`${currentDayOfWeek}, ${dayOfMonth} de ${monthShow} de ${currentYear}`"></textContent>
+    <TextContent :text="`${currentDayOfWeek}, ${dayOfMonth} de ${monthShow} de ${currentYear}`"></TextContent>
   </div>
 </template>
 

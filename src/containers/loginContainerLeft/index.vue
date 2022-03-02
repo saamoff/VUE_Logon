@@ -9,7 +9,7 @@
       <Title titleDetails=true control="3" text="Login"></Title>
       <InputLogin inputText=true typeInput="text" placeHolder="Usuário" icon="usericon"></InputLogin>
       <InputLogin inputText=true typeInput="password" placeHolder="Senha" icon="lockpad"></InputLogin>
-      <InputLogin inputSubmit=true typeInput="submit" innerHTML="Continuar"></InputLogin>
+      <InputLogin inputSubmit=true typeInput="submit" text="Continuar"></InputLogin>
     </form>
   </div>
 </template>

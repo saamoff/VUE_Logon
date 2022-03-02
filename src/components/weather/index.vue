@@ -1,9 +1,9 @@
 <template>
   <div id='weatherContainer'>
-    <textContent city=true :text="`${currentCity} - ${currentState}`"></textContent>
+    <TextContent city=true :text="`${currentCity} - ${currentState}`"></TextContent>
     <div>
-      <img draggable="false" :src="require(`@/assets/iconsWeather/${currentCondition}`)" alt="icon">
-      <textContent temp=true :text="`${currentTemp}°`"></textContent>
+      <img draggable="false" :src="require(`@/assets/iconsWeather/${currentCondition}.png`)" alt="icon">
+      <TextContent temp=true :text="`${currentTemp}°`"></TextContent>
     </div>
   </div>
 </template>
