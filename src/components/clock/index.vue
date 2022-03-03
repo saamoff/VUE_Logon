@@ -1,6 +1,6 @@
 <template>
   <div class='clock'>
-    <div id='clockContainer'>
+    <div aria-labelledby="clock" id='clockContainer'>
       <Title clock=true control="1" :text="`${hour}`"></Title>
       <Title clock=true control="1" text=":"></Title>
       <Title clock=true control="1" :text="`${minutes}`"></Title>

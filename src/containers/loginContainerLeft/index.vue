@@ -1,15 +1,15 @@
 <template>
   <div id="loginContainerL">
     <img src="@/assets/images/Logo-Compasso-Branco-hor1.png" alt="logo">
-    <div id="greetings">
+    <div aria-labelledby="greetings" id="greetings">
       <Title titleLogin=true control="1" text="Olá,"></Title>
       <TextContent pLogin=true text="Para continuar navegando de forma segura, efetue o login na rede."></TextContent>
     </div>
-    <form @submit.prevent="loginForm" id="loginDetails">
+    <form aria-labelledby="login-details" @submit.prevent="loginForm" id="loginDetails">
       <Title titleDetails=true control="3" text="Login"></Title>
       <InputLogin inputText=true typeInput="text" placeHolder="Usuário" icon="usericon"></InputLogin>
       <InputLogin inputText=true typeInput="password" placeHolder="Senha" icon="lockpad"></InputLogin>
-      <div id="errorLogin">
+      <div aria-labelledby="error-login" id="errorLogin">
         <TextContent v-show="logged" errorMessage=false text="Ops, usuário ou senha inválidos. Tente novamente!"></TextContent>
       </div>
       <InputLogin inputSubmit=true typeInput="submit" text="Continuar"></InputLogin>

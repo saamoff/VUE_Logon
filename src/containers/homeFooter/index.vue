@@ -8,10 +8,10 @@
       <TextContent pTimer=true text="Application refresh in"></TextContent>
     </div>
     <Timer id="timerContainer"></Timer>
-    <div id="continueNav">
+    <div aria-labelledby="continue-navigating" id="continueNav">
       <button>Continuar<br>Navegando</button>
     </div>
-    <div id="logout">
+    <div aria-labelledby="logout" id="logout">
       <button @click="logout">Logout</button>
     </div>
   </div>

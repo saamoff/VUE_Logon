@@ -1,5 +1,5 @@
 <template>
-  <div id='weatherContainer'>
+  <div aria-labelledby="current-weather" id='weatherContainer'>
     <TextContent city=true :text="`${currentCity} - ${currentState}`"></TextContent>
     <div>
       <img draggable="false" :src="require(`@/assets/iconsWeather/${currentCondition}.png`)" alt="icon">

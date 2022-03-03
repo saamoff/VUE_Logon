@@ -1,7 +1,7 @@
 <template>
   <div id="contentHome">
     <img draggable="false" src="@/assets/images/bola-LogoCompasso1.png" alt="Logo">
-    <div id="textContainer">
+    <div aria-labelledby="company-mission" id="textContainer">
       <Title contentHome1=true control="1" text="Our mission is"></Title>
       <TextContent pContentHome1=true text="Nossa missão é"></TextContent>
       <Title contentHome2=true control="2" text="to transform the world"></Title>
