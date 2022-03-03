@@ -1,6 +1,6 @@
-template>
+<template>
   <div :class="{inputTextClass:inputText, inputSubmitClass:inputSubmit}" id="inputLogin">
-    <i<nput :type="typeInput" required :placeholder="placeHolder" :value="text">
+    <input :type="typeInput" required :placeholder="placeHolder" :value="text">
     <img v-if="icon" :src="require(`@/assets/images/${iconID}.png`)" alt="Icon">
   </div>
 </template>
