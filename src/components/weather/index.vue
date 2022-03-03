@@ -20,7 +20,9 @@ export default {
       currentTemp: '',
       currentCity: '',
       currentState: '',
-      currentCondition: ''
+      currentCondition: {
+        default: 'sun'
+      }
     }
   },
   methods: {
@@ -33,7 +35,7 @@ export default {
           fetch(`http://api.weatherapi.com/v1/current.json?key=c54d9525f89c41f0a7c194602220202&q=${lat},${long}`)
             .then((response) => response.json())
             .then((data) => {
-              console.log(data)
+            
               const province = data.location.region;
               this.currentState = this.stateAbbreviation(province);
 
@@ -137,17 +139,17 @@ export default {
     },
     weatherIcon(icon, iconText){
       if(iconText.includes('thunder') && iconText.includes('rain')){
-        icon = 'storm.png';
+        icon = 'storm';
       }else if(iconText.includes('thunder')){
-        icon = 'thunder.png';
+        icon = 'thunder';
       }else if(iconText.includes('rain') || iconText.includes('drizzle')){
-        icon = 'raining.png';
+        icon = 'raining';
       }else if(iconText.includes('Fog') || iconText.includes('Mist')){
-        icon = 'cloud.png'
+        icon = 'cloud'
       }else if(iconText.includes('Cloudy') || iconText.includes('cloudy') || iconText.includes('Overcast')){
-        icon = 'cloudy.png'
+        icon = 'cloudy'
       }else if(iconText.includes('Sunny') || iconText.includes('Clear')){
-        icon = 'sun.png'
+        icon = 'sun'
       }
       return icon
     },
