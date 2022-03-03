@@ -1,8 +1,8 @@
 <template>
   <div id=headerContainer>
     <img draggable="false" src="@/assets/images/LogoCompasso1.png" alt="Logo">
-    <clock></clock>
-    <weather></weather>
+    <Clock></Clock>
+    <Weather></Weather>
   </div>
 </template>
 

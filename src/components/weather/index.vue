@@ -33,7 +33,7 @@ export default {
           fetch(`http://api.weatherapi.com/v1/current.json?key=c54d9525f89c41f0a7c194602220202&q=${lat},${long}`)
             .then((response) => response.json())
             .then((data) => {
-
+              console.log(data)
               const province = data.location.region;
               this.currentState = this.stateAbbreviation(province);
 
@@ -146,7 +146,7 @@ export default {
         icon = 'cloud.png'
       }else if(iconText.includes('Cloudy') || iconText.includes('cloudy') || iconText.includes('Overcast')){
         icon = 'cloudy.png'
-      }else if(iconText.includes('Sunny')){
+      }else if(iconText.includes('Sunny') || iconText.includes('Clear')){
         icon = 'sun.png'
       }
       return icon

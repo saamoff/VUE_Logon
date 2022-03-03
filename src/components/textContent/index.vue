@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p :class="{tempClass:temperature, cityClass:city, pContentTitle:pContentHome1, pContentLast:pContentHome2, pContentFooter:pFooter, pTimerClass:pTimer, pLoginClass:pLogin}">{{ text }}</p>
+    <p :class="{tempClass:temperature, cityClass:city, pContentTitle:pContentHome1, pContentLast:pContentHome2, pContentFooter:pFooter, pTimerClass:pTimer, pLoginClass:pLogin, errorLoginClass:errorMessage}">{{ text }}</p>
   </div>
 </template>
 
@@ -32,6 +32,9 @@ export default {
       default: false
     },
     pLogin: {
+      default: false
+    },
+    errorMessage: {
       default: false
     }
   },

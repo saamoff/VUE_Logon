@@ -7,14 +7,18 @@
     </div>
     <form @submit.prevent="loginForm" id="loginDetails">
       <Title titleDetails=true control="3" text="Login"></Title>
-      <InputLogin inputText=true typeInput="text" placeHolder="Usuário" icon="usericon"></InputLogin>
-      <InputLogin inputText=true typeInput="password" placeHolder="Senha" icon="lockpad"></InputLogin>
+      <InputLogin inputText=true typeInput="text" placeHolder="Usuário" icon="usericon" v-model="userData"></InputLogin>
+      <InputLogin inputText=true typeInput="password" placeHolder="Senha" icon="lockpad" v-model="passwordData"></InputLogin>
+      <div id="errorLogin">
+        <TextContent v-show="logged" errorMessage=false text="Ops, usuário ou senha inválidos. Tente novamente!"></TextContent>
+      </div>
       <InputLogin inputSubmit=true typeInput="submit" text="Continuar"></InputLogin>
     </form>
   </div>
 </template>
 
 <script>
+import router from '@/router/index.js'
 import {mapMutations} from 'vuex'
 import TextContent from '@/components/textContent/index.vue';
 import Title from '@/components/title/index.vue';
@@ -26,8 +30,23 @@ export default {
     Title,
     InputLogin
   },
+  data(){
+    return{
+      userData: '',
+      passwordData: '',
+      logged: false
+    }
+  },
   methods:{
-    ...mapMutations(["setLoginError", "loginForm"])
+    ...mapMutations(["setLoginError"]),
+    loginForm(){
+      if(this.userData == 'admin' && this.passwordData == 'admin'){
+        router.push({name:'Home'})
+      }else{
+        this.setLoginError()
+        this.logged = true
+      }
+    }
   }
 }
 </script>
