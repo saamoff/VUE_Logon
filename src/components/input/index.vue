@@ -1,11 +1,12 @@
 <template>
   <div :class="{inputTextClass:inputText, inputSubmitClass:inputSubmit}" id="inputLogin">
-    <input :type="typeInput" required :placeholder="placeHolder" :value="text">
+    <input :type="typeInput" required :placeholder="placeHolder" :value="text" v-model="inputContent" @blur="callMutation">
     <img v-if="icon" :src="require(`@/assets/images/${iconID}.png`)" alt="Icon">
   </div>
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 export default {
   name: 'InputLogin',
   props: {
@@ -34,7 +35,19 @@ export default {
   },
   data(){
     return {
-      iconID: this.icon
+      iconID: this.icon,
+      inputContent: ''
+    }
+  },
+  methods: {
+    ...mapMutations(['updateUser', 'updatePassword']),
+
+    callMutation(){
+      if(this.typeInput == 'password'){
+        this.updatePassword(this.inputContent)
+      }else{
+        this.updateUser(this.inputContent)
+      }
     }
   }
 }
