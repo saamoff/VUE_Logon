@@ -45,8 +45,10 @@ export default {
     callMutation(){
       if(this.typeInput == 'password'){
         this.updatePassword(this.inputContent)
+        return this.$sanitize(this.inputContent)
       }else{
         this.updateUser(this.inputContent)
+        return this.$sanitize(this.inputContent)
       }
     }
   }
