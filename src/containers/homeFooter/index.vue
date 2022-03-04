@@ -12,7 +12,7 @@
       <button>Continuar<br>Navegando</button>
     </div>
     <div aria-labelledby="logout" id="logout">
-      <button @click="logout">Logout</button>
+      <button @click="logoutButton">Logout</button>
     </div>
   </div>
 </template>
@@ -21,6 +21,7 @@
 import TextContent from '@/components/textContent/index.vue';
 import Timer from '@/components/timer/index.vue'
 import router from '@/router/index.js'
+import {mapMutations} from 'vuex'
 export default {
   name: 'HomeFooter',
   components: {
@@ -28,7 +29,10 @@ export default {
     Timer
   },
   methods:{
-    logout(){
+    ...mapMutations(['logout']),
+
+    logoutButton(){
+      this.logout()
       router.push({name:'Login'})
     }
   }

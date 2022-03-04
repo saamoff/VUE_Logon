@@ -7,8 +7,8 @@
     </div>
     <form aria-labelledby="login-details" @submit.prevent="loginForm" id="loginDetails">
       <Title titleDetails=true control="3" text="Login"></Title>
-      <InputLogin inputText=true typeInput="text" placeHolder="Usuário" icon="usericon"></InputLogin>
-      <InputLogin inputText=true typeInput="password" placeHolder="Senha" icon="lockpad"></InputLogin>
+      <InputLogin inputText=true typeInput="text" placeHolder="Usuário" icon="usericon" :class="{errorBorder:loginError}"></InputLogin>
+      <InputLogin inputText=true typeInput="password" placeHolder="Senha" icon="lockpad" :class="{errorBorder:loginError}"></InputLogin>
       <div aria-labelledby="error-login" id="errorLogin">
         <TextContent v-show="logged" errorMessage=false text="Ops, usuário ou senha inválidos. Tente novamente!"></TextContent>
       </div>
@@ -48,7 +48,7 @@ export default {
     },
   },
   computed: {
-    ...mapState(['user', 'password'])
+    ...mapState(['user', 'password', 'loginError'])
   }
 }
 </script>

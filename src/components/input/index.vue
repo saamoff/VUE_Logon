@@ -20,7 +20,7 @@ export default {
     },
     text: {
       type: String,
-      default: ''
+      default: 'Continuar'
     },
     icon: {
       type: String,
@@ -36,7 +36,7 @@ export default {
   data(){
     return {
       iconID: this.icon,
-      inputContent: ''
+      inputContent: 'Continuar'
     }
   },
   methods: {
@@ -50,7 +50,16 @@ export default {
         this.updateUser(this.inputContent)
         return this.$sanitize(this.inputContent)
       }
+    },
+
+    resetField(){
+      if(this.typeInput != 'submit'){
+        this.inputContent = ''
+      }
     }
+  },
+  created(){
+    this.resetField()
   }
 }
 </script>

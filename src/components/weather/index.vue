@@ -2,7 +2,7 @@
   <div aria-labelledby="current-weather" id='weatherContainer'>
     <TextContent city=true :text="`${currentCity} - ${currentState}`"></TextContent>
     <div>
-      <img draggable="false" :src="require(`@/assets/iconsWeather/${currentCondition}.png`)" alt="icon">
+      <img v-if="currentCondition" draggable="false" :src="require(`@/assets/iconsWeather/${currentCondition}.png`)" alt="icon">
       <TextContent temp=true :text="`${currentTemp}°`"></TextContent>
     </div>
   </div>
@@ -17,9 +17,15 @@ export default {
   },
   data(){
     return{
-      currentTemp: '',
-      currentCity: '',
-      currentState: '',
+      currentTemp: {
+        default: '20'
+      },
+      currentCity: {
+        default: 'Juiz de Fora'
+      },
+      currentState: {
+        default: 'MG'
+      },
       currentCondition: {
         default: 'sun'
       }

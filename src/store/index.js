@@ -19,6 +19,9 @@ export default new Vuex.Store({
     },
     updatePassword(state, password){
       state.password = password
+    },
+    logout(state){
+      state.loginError = false
     }
   },
   actions: {
