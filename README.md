@@ -1,9 +1,9 @@
 # Compass Logon
 
 ## Project Info
-```
+
 This project was made for a Insider program at Compass.uol, where we had to develop a premade website on figma with a logon feature and a timer to time out the user.
-```
+
 
 ### Project Figma
 
